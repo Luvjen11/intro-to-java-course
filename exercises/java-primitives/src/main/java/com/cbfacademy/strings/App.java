@@ -14,6 +14,7 @@ public class App {
 
     public static Boolean areEqual(String word1, String word2) {
         // TODO: Write code to determine whether the input parameters are equal strings
+        System.out.println(word1.equals(word2));
         throw new RuntimeException("Not implemented");
     }
 
