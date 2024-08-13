@@ -7,6 +7,8 @@ public class App {
 
     public static String concatenate(String word1, String word2, String word3) {
         // TODO: Write code that concatenates the input parameters and returns the result
+        String concatenated = word1 + " " + word2 + " " + word3;
+        System.out.println(concatenated);
         throw new RuntimeException("Not implemented");
     }
 
