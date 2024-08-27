@@ -14,18 +14,19 @@ public class FlowControlExercises {
         //  - if the ${element} is divisible by both 3 and 5, it adds “FizzBuzz” to the list
         //  - it adds the element to the list in any other case
         //  - it returns the constructed list
+        List<String> result = new ArrayList<>(); 
         for (int i = 1; i <= numbers.size(); i++) {
             if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
+                result.add("FizzBuzz");
             } else if (i % 5 == 0) {
-                System.out.println("Buzz");
+                result.add("Buzz");
             } else if (i % 3 == 0) {
-                System.out.println("Fizz");
+                result.add("Fizz");
             } else {
-                System.out.println(i);
+                result.add(String.valueOf(numbers)); // Converts the number to a string
             }
         }
-        return fizzBuzz(numbers);
+        return result;
     }
 
     public String whichMonth(Integer number) {
@@ -34,46 +35,32 @@ public class FlowControlExercises {
         //  - if the ${number} is invalid, the method should return "Invalid month number"
         switch (number) {
             case 1:
-                System.out.println("January");
-                break;
+                return "January";
             case 2:
-                System.out.println("February");
-                break;
+                return "February";
             case 3: 
-                System.out.println("March");
-                break;
+                return"March";
             case 4:
-                 System.out.println("April");
-                 break;
+                return "April";
             case 5:
-                 System.out.println("May");
-                 break;
+                return "May";
             case 6:
-                 System.out.println("June");
-                 break;
+                return "June";
             case 7:
-                 System.out.println("July");
-                 break;
+                return "July";
             case 8:
-                 System.out.println("August");
-                 break;
+                return "August";
             case 9:
-                 System.out.println("September");
-                 break;
+                return "September";
             case 10:
-                 System.out.println("October");
-                 break;
+                return "October";
             case 11:
-                 System.out.println("November");
-                 break;
+                return "November";
             case 12:
-                 System.out.println("December");
-                 break;        
+                return "December";      
             default:
-                 System.out.println("Invalid month number");
-                break;
+                return "Invalid month number";
         }
-        return whichMonth(number);
     }
 
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {
