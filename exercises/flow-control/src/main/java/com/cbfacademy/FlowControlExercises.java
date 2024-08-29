@@ -9,23 +9,23 @@ public class FlowControlExercises {
     public List<String> fizzBuzz(List<Integer> numbers) {
         // Implement this method such that
         //  it creates a list where for each element of the input list ${numbers}
-        //  - if the ${element} is divisible by 3, it adds “Fizz” to the list
-        //  - if the ${element} is divisible by 5, it adds “Buzz” to the list
-        //  - if the ${element} is divisible by both 3 and 5, it adds “FizzBuzz” to the list
-        //  - it adds the element to the list in any other case
-        //  - it returns the constructed list
-        List<String> result = new ArrayList<>(); 
-        for (int i = 1; i <= numbers.size(); i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
+        List<String> result = new ArrayList<>();
+        for (Integer i : numbers) { // for each index(with list type) in numbers(list name) do the following
+            //  - if the ${element} is divisible by both 3 and 5, it adds “FizzBuzz” to the list
+            if (i % 3 == 0 && i % 5 == 0) {   
                 result.add("FizzBuzz");
+            //  - if the ${element} is divisible by 5, it adds “Buzz” to the list
             } else if (i % 5 == 0) {
                 result.add("Buzz");
+            //  - if the ${element} is divisible by 3, it adds “Fizz” to the list 
             } else if (i % 3 == 0) {
-                result.add("Fizz");
-            } else {
-                result.add(String.valueOf(numbers)); // Converts the number to a string
+                result.add("Fizz"); 
+                //  - it adds the element to the list in any other case     
+            } else {   
+                result.add(String.valueOf(i)); // Converts the number to a string because this is a String list
             }
         }
+        //  - it returns the constructed list 
         return result;
     }
 
@@ -66,22 +66,16 @@ public class FlowControlExercises {
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {
         // Implement this method such that
         //  - creates and initialises a list of 100 numbers - from 1 to 100
+       // List<Integer> numIntegers = new ArrayList<>();
+       // for (int i =1; i>= 100; i++) {
+
+       // }
         //  - determines the sum of all the even numbers in the list
         //  - determines the sum of all the odd numbers in the list
         //  - returns a map with two entries:
         //      {"SumOfEvens", calculatedSumOfEvens}, {"SumOfOdds", calculatedSumOfOdds}
-       List<Integer> numIntegers = new ArrayList<>();
 
-        for (int i = 0; i<= 100; i++) {
-           numIntegers.add(i);
-           //int calculatedSumOfEvens = 0;
-           //int calculatedSumOfOdds = 0;
-           if (i % 2 == 0) {
-               numIntegers.iterator();
-           } else {
-              numIntegers.add(i);
-           }
-        }
+       // }
 
         // sumOfOddsAndSumOfEvens().put("SumOfEvens", calculatedSumOfEvens);
        // sumOfOddsAndSumOfEvens().put("SumofOdds", calculatedSumOfOdds);
