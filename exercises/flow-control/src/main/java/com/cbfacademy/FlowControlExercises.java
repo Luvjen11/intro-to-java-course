@@ -67,28 +67,31 @@ public class FlowControlExercises {
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {
         // Implement this method such that
         //  - creates and initialises a list of 100 numbers - from 1 to 100
-        List<Integer> numIntegers = new ArrayList<>();
+        List<Integer> listNumIntegers = new ArrayList<>();
+
+        for (int i=0; i<= 100; i++ ){
+            listNumIntegers.add(i);
+        }
+
         int sumOfEvens = 0;
         int sumOfOdds = 0;
-        for (int i =1; i>= 100;) {
-           if (i % 2 ==0) {
-              sumOfEvens += numIntegers.get(i);
-           } else {
-              sumOfOdds += numIntegers.get(i);
-           }
+
+        for (Integer i : listNumIntegers) {
+            if (i % 2 == 0){
+               sumOfEvens += i; //  - determines the sum of all the even numbers in the list
+               //like writing sumOfEvens = sumOfEvens + i;
+            } else {
+                sumOfOdds += i; //  - determines the sum of all the odd numbers in the list
+            }
         }
-        //  - determines the sum of all the even numbers in the list
-        // what is an even number? if I divide by 2 it gives 0 as rest(modulo)
-        // odd number? is the opposite of an even number (!even)
-        //  - determines the sum of all the odd numbers in the list
-        HashMap<String, Integer> resultMap = new HashMap<>();
-
-            resultMap.put("SumOfEvens", sumOfEvens);
-            resultMap.put("SumOfOdds", sumOfOdds);
-
         //  - returns a map with two entries:
+        Map<String, Integer> returnMap = new HashMap<>();
         //      {"SumOfEvens", calculatedSumOfEvens}, {"SumOfOdds", calculatedSumOfOdds}
-        return resultMap;
+
+        returnMap.put("SumOfEvens", sumOfEvens);
+        returnMap.put("SumOfOdds", sumOfOdds);
+
+        return returnMap;
     }
 
     public List<Integer> reverse(ArrayList<Integer> numbers) {
