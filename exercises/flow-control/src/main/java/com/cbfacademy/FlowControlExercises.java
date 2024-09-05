@@ -99,7 +99,10 @@ public class FlowControlExercises {
         //  - it takes an array list of integers
         List<Integer> revList = new ArrayList<>(); 
         //  - it returns the list in reverse order
-        return revList.reversed();
+        for (int i = numbers.size() -1; i>=0; i--) {
+            revList.add(numbers.get(i));
+        }
+        return revList;
     }
 
     public String getName() {
