@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.HashSet;
 
 public class CollectionsAssignment {
 
@@ -35,12 +36,8 @@ public class CollectionsAssignment {
      */
     public static boolean containsDuplicates(Collection<Integer> integers) {
         // Your solution must not use any loops.
-        List<Integer> duplicaIntegers = new ArrayList<>();
-        if (duplicaIntegers.equals(duplicaIntegers)){
-            return true;
-        }else {
-            return false;
-        }
+       HashSet<Integer> removeDuplicate = new HashSet<>(integers); // a set cannot contain duplicates
+       return removeDuplicate.size() < integers.size();
     }
 
     /**
