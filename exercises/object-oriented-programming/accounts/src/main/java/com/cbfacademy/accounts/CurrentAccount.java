@@ -2,13 +2,10 @@ package com.cbfacademy.accounts;
 
 public class CurrentAccount extends Account {
 
-    int accountNumber;
-    double balance;
     double overdraftLimit;
 
     public CurrentAccount(int accountNumber, double balance, double overdraftLimit){
-        this.accountNumber = accountNumber;
-        this.balance = balance;
+        super(accountNumber, balance);
         this.overdraftLimit = overdraftLimit;
     }
 

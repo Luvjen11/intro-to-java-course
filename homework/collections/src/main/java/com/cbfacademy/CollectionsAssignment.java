@@ -19,13 +19,11 @@ public class CollectionsAssignment {
         // Your solution must traverse the list from last to first element
         // removing any values less than minValue.
 
-
-
-        
-        // Collections.sort(list);
-        // System.out.println(list);
-
-        // list.listIterator(minValue);
+        for (int i = list.size() - 1; i >= 0; i--) {
+            if (list.get(i) < minValue) {
+                list.remove(i);
+            }
+        }
     }
 
     /**
@@ -37,8 +35,12 @@ public class CollectionsAssignment {
      */
     public static boolean containsDuplicates(Collection<Integer> integers) {
         // Your solution must not use any loops.
-
-        return false;
+        List<Integer> duplicaIntegers = new ArrayList<>();
+        if (duplicaIntegers.equals(duplicaIntegers)){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     /**
