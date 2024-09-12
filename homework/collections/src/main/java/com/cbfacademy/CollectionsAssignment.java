@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.TreeSet;
 import java.util.HashSet;
 
 public class CollectionsAssignment {
@@ -57,7 +58,13 @@ public class CollectionsAssignment {
      */
     public static ArrayList<Integer> inEither(Collection<Integer> ints1, Collection<Integer> ints2) {
         // This must be done with no loops.
-        return new ArrayList<Integer>();
+        TreeSet<Integer> removeduplicatIntegers = new TreeSet<>(ints1);
+
+        removeduplicatIntegers.addAll(ints2);
+
+        ArrayList<Integer> sortedIntegers = new ArrayList<>(removeduplicatIntegers);
+        
+        return sortedIntegers;
     }
 
     /**
