@@ -9,4 +9,8 @@ public class PlayerFactory {
     public static DicePlayer create() {
         return new DicePlayer();
     }
+
+    public String getName() {
+        return getName();
+    }
 }
